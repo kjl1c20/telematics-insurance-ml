@@ -1,0 +1,1 @@
+This is my first official machine learning project from scratch. I am going to explore how we can make use of telematics and demographic data to help insurer decide the price of the insurance for each driver.
