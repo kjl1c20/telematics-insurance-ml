@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "telematics-insurance-analysis-ml"
+version = "0.1.0"
+description = "Production-grade machine learning pipeline fo accident prediction based on telematics and demograhic data."
+package-mode = false
+
+authors = ["Lee Kang Jie"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.13,<4.0"
+pandas = "^2.3.3"
+numpy = "^2.3"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "ipykernel (>=7.2.0,<8.0.0)"
+]
