@@ -51,7 +51,7 @@
 
 **Model goal** *(one sentence — what should the model predict or decide?)*
 
-> *e.g. Predict the number of minutes a caller will wait on hold given current call centre conditions.*
+> *Predict the premium per policy year (expected frequency*expected severity) given the demographics and historical telematics data.*
 
 
 **Output type** *(tick one)*:
