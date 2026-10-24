@@ -20,6 +20,8 @@ TRADITIONAL_COLS = [
     "Insured.age", "Insured.sex", "Car.age", "Marital", "Car.use",
     "Credit.score", "Region", "Annual.miles.drive", "Years.noclaims", "Territory",
 ]
+# Excluded features to improve model performance
+EXCLUDED_COLS = ["Territory"]  # High cardinality categorical feature, not very predictive in this dataset
 
 
 def load_data(path="telematics_syn-032021.csv", drop_columns_path="drop_columns.json"):

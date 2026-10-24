@@ -37,3 +37,5 @@ Result: the lowest threshold won in every group.
 20 columns dropped, saved to drop_columns.json and loaded in the main notebook.
 
 Next is investigate, is there a pattern in which individual day metric and see if there is a better way in handling 50 territories. Need to look into claim severity model next.
+
+Based on the result above, we are going to drop the 'Territory' column as the mean poisson deviation is lower after dropping the column across all folds. With about 66 claims per territory, there’s too little data for 54 coefficients.
