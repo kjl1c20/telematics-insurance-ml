@@ -51,12 +51,12 @@ def build_pipeline(cat_cols, alpha=0.0):
     )
 
 
-def cv_deviance(pipe, X, y, exposure):
+def cv_deviance(pipe, X, y, exposure, random_state=RANDOM_STATE):
     """Exposure weighted Poisson deviance for each fold (lower is better)."""
     scorer = make_scorer(mean_poisson_deviance, greater_is_better=False).set_score_request(sample_weight=True) # this line makes the mean poisson deviance become negative
     cv = cross_validate(
         pipe, X, y / exposure,
-        cv=KFold(5, shuffle=True, random_state=RANDOM_STATE),
+        cv=KFold(5, shuffle=True, random_state=random_state),
         scoring=scorer,
         params={"sample_weight": exposure},
     )
